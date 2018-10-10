@@ -1,6 +1,8 @@
 import { Route, Link } from 'react-router-dom'
-import About from './about'
-import Home from './home'
+import About from './containers/About'
+import Counter from './containers/Counter'
+import Todo from './containers/Todo'
+import Home from './containers/Home'
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -13,15 +15,18 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Link to="/">Home</Link>
-        <Link to="/about-us">About</Link>
+        <div className="Links">
+          <Link to="/">Home</Link>
+          <Link to="/about-us">About</Link>
+          <Link to="/counter">Counter</Link>
+          <Link to="/todo">Todo</Link>
+        </div>
 
         <main>
           <Route exact path="/" component={Home} />
           <Route exact path="/about-us" component={About} />
+          <Route exact path="/counter" component={Counter} />
+          <Route exact path="/todo" component={Todo} />
         </main>
       </div>
     );

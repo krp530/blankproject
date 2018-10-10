@@ -34,6 +34,5 @@ const store = createStore(
 )
 
 sagaMiddleware.run(helloSaga)
-const action = type => store.dispatch({type})
 
 export default store
