@@ -59,7 +59,7 @@ class Reference extends Component {
     super(props);
 
     this.state = {
-      open: true,
+      open: false,
     };
 
     this.openModal = this.openModal.bind(this);
