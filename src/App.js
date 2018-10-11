@@ -4,6 +4,7 @@ import Counter from './containers/Counter'
 import Todo from './containers/Todo'
 import Home from './containers/Home'
 import React, { Component } from 'react';
+import Reference from './modules/reference/Reference'
 import logo from './logo.svg';
 import './App.css';
 
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path="/counter" component={Counter} />
           <Route exact path="/todo" component={Todo} />
         </main>
+        <Reference />
       </div>
     );
   }
